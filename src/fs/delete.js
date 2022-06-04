@@ -6,9 +6,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export const remove = async () => {
+  const folder = "files";
+  const fileName = "fileToRemove.txt";
   try {
-    const folder = "files";
-    const fileName = "fileToRemove.txt";
     const filesList = await fsPromise.readdir(join(__dirname, folder));
     if (filesList.every((item) => item !== fileName)) {
       throw new Error("Target file doesn't exist");

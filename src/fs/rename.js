@@ -6,10 +6,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export const rename = async () => {
+  const folder = "files";
+  const oldName = "wrongFilename.txt";
+  const newName = "properFilename.md";
   try {
-    const folder = "files";
-    const oldName = "wrongFilename.txt";
-    const newName = "properFilename.md";
     const filesList = await fsPromise.readdir(join(__dirname, folder));
     if (filesList.every((item) => item !== oldName)) {
       throw new Error("Old file doesn't exist");
