@@ -10,7 +10,7 @@ export const parseEnv = () => {
     resStr += `${item[0]}=${item[1]}; `;
   });
 
-  stdout.write(resStr + "\n");
+  stdout.write(resStr.slice(0, -2) + "\n");
 };
 
 parseEnv();
