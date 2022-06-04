@@ -13,7 +13,7 @@
     "fs:read": "node src/fs/read.js",
     "cli:env": "node src/cli/env.js",
     "cli:args": "node src/cli/args.js --propName value --prop2Name value2",
-    "modules": "node src/modules/cjsToEsm.js",
+    "modules": "node src/modules/cjsToEsm.mjs",
     "hash": "node src/hash/calcHash.js",
     "streams:read": "node src/streams/read.js",
     "streams:write": "node src/streams/write.js",
