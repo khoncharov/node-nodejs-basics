@@ -14,6 +14,7 @@
     "cli:env": "node src/cli/env.js",
     "cli:args": "node src/cli/args.js --propName value --prop2Name value2",
     "modules": "node src/modules/cjsToEsm.mjs",
+    "modules:test": "node src/modules/test.js",
     "hash": "node src/hash/calcHash.js",
     "streams:read": "node src/streams/read.js",
     "streams:write": "node src/streams/write.js",
