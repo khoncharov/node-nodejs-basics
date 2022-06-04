@@ -17,7 +17,10 @@ export const rename = async () => {
     if (filesList.includes(newName)) {
       throw new Error("New file exists");
     }
-    fsPromise.rename(join(__dirname, folder, oldName), join(__dirname, folder, newName));
+    await fsPromise.rename(
+      join(__dirname, folder, oldName),
+      join(__dirname, folder, newName)
+    );
   } catch (error) {
     console.error("FS operation failed");
   }
